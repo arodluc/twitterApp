@@ -1,0 +1,16 @@
+<div class="loginContainer" data-ng-controller="loginCtrl">
+    <form id="form" name="twitterForm">
+
+        <div class="control-group" ng-class="{error: twitterForm.name.$invalid}">
+            <label class="labelsForm">Usuario</label>
+            <input type="text" name="name" ng-model="user.username" required>
+        </div>
+
+        <div class="control-group" ng-class="{error: twitterForm.password.$invalid}">
+            <label class="labelsForm">Contraseña</label>
+            <input type="password" name="password" ng-model="user.password" required>
+        </div>
+
+        <button class="sendButton" ng-click="send(user)">Aceptar</button>
+    </form>
+</div>
