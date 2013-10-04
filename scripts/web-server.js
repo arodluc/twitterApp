@@ -58,11 +58,10 @@ HttpServer.prototype.handleRequest_ = function (req, res) {
     util.puts(logEntry);
     req.url = this.parseUrl_(req.url);
 
-    res.header('Access-Control-Allow-Origin', '*');
+    /*res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET POST OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Origin,X-Custom-Header,X-Requested-With,Content-Type,Accept');
-    res.header('Access-Control-Max-Age', 1728000);
-
+    res.header('Access-Control-Max-Age', 1728000);*/
 
     var handler = this.handlers[req.method];
     if (!handler) {
